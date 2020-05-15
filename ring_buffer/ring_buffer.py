@@ -10,7 +10,7 @@ class RingBuffer:
             self.data[self.index] = item
         else:
             self.data.append(item)
-        self.index = (self.index + 1) % self.capacity
+        self.index = (self.index + 1) % self.capacity # this sets the index back to zero
         
     def get(self):
         return self.data
